@@ -1,0 +1,33 @@
+data/runs - results of predictions
+data/train/images - for training network
+data/train/masks
+data/validation/images - for validating network
+data/validation/masks
+data/weights - trained TensorFlow models
+data/raw_sim_data/train/<folder name> - raw data from collection run
+data/raw_sim_data/validation/<folder name>
+(name <folder name> uniquely for multiple collection runs)
+data/raw_storage - raw data stored for later use (base sets, expansions, extras)
+data/processed_sim_data - all data in raw_sim_data processed and ready to be used for training
+data/processed_storage - preloaded training/test sets
+
+Directions for collecting training/validation data:
+1. Set patrol points, path points, spawn points
+2. Press "r" to start recording
+3. Navigate to the folder that you want to save images in. For training, use data/raw_sim_data/train/run*. For validation use /data/raw_sim_data/validation/run*
+4. Press 1-9 to speed up / slow down collection speed
+5. Press "r" to stop recording
+6. Hit "esc" to reset simulator
+7. Repeat above steps using different directories to collect multiple runs
+
+Image preprocessing:
+Converts images to .jpeg and converts images to binary masks for training. Run using:
+python /code/preprocess_ims.py
+Stores processed images in "data/processed_sim_data/train" and "data/processed_sim_data/validation"
+
+** Note 1: preprocess_ims.py will overwrite files in the "processed_sim_data/" folder. Move the existing folders within somewhere else before using preprocess_ims.py again.
+
+** Note 2: CNN training code will look in "data/train" and "data/validation" for training, so make sure your "processed_sim_data/train" and "processed_sim_data/validation" has been moved into those folders before beginning training.
+
+** Note 3: merging outputs from multiple instances of preprocess_ims.py may be difficult. All "run_x" folders in "raw_sim_data/train" and "raw_sim_data/validation" will be processed as combined training and validation sets. If there is raw_data that you don't want to be processed by preprocess_ims, then move those "run_x" folders from "raw_sim_data/train" and "raw_sim_data/validation" to another temp folder elsewhere in "data"
+

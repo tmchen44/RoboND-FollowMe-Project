@@ -1,0 +1,10 @@
+training data:
+1053 - angles / crowds
+1215 - env / ppl
+1188 - following / ppl
+
+validation data:
+276 - angles / crowds
+369 - env / ppl
+416 - following / ppl
+

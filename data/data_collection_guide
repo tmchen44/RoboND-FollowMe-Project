@@ -1,0 +1,44 @@
+"h" to switch local control and patrol mode
+
+Three aspects of control in data collection process:
+1. Path that quad will take while on patrol (not the same as follow mode)
+2. Path that hero will walk
+3. Locations of other people spawns
+
+Setting Patrol Points for quad:
+- Start in local control mode by toggling "h"
+- Press "p" to set starting patrol point (in green, at quad's current position)
+- Move quad and press "p" again to add another patrol point
+- Now when you press "h" quad will start patrol mode
+- Press "l" to remove all patrol points
+
+Setting hero path:
+- Start in local control mode
+- Press "o" to set path point, sets at current quad position
+- remove all hero path points by pressing "k"
+- hero will start at first path point and walk around path. At end, hero will disappear and appear again at beginning of path
+
+Setting spawn points for other people:
+- set spawn point at current quad x, y position by pressing "i"
+- remove all spawn points with "j"
+- might be helpful to rotate camera to view quad from directly above
+
+May want multiple collection runs targeting specific types of data (environment, other people, hero):
+- Will probably want to have a large sample of data containing the hero
+- If you create a large patrol path and hero path, you will probably not get many images of the hero.
+- can create folders like "target", "non-targets", "environment"
+
+Starting collection run:
+- Once patrol path, hero path, and spawn points are set, press "m" to have people start spawning.
+- press "r" to start recording.
+- Recommended that you restart the sim (using "esc") before trying to set up another data collection run.
+- Press "h" to have quad enter patrol mode. Press "9" to speed up data collection process.
+- when done collecting data, press "r" to stop recording.
+
+Best practices:
+- use "j, k, l" to clear all waypoints
+- try to get all angles of hero using patrol. gather data while in patrol directly over the hero, as she zigzags
+- standard patrol data (without hero?)
+- follow hero in a dense crowd
+
+
