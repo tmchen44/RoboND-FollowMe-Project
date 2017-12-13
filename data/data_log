@@ -1,9 +1,17 @@
-training data:
-1053 - angles / crowds
-1215 - env / ppl
-1188 - following / ppl
 
-validation data:
+train1_base (3456):
+1053 - angle - close & far
+1215 - env w/ ppl
+1188 - following
+
+train1_exp (3093):
+1118 - bldg
+1367 - far - target & npc
+ 608 - npc
+
+train1_total: 6549
+
+valid1_base:
 276 - angles / crowds
 369 - env / ppl
 416 - following / ppl
