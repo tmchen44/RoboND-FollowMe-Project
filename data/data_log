@@ -1,13 +1,17 @@
+log of data collected from simulator
 
 train1_base (3456):
 1053 - angle - close & far
 1215 - env w/ ppl
 1188 - following
 
-train1_exp (3093):
+train1_exp1 (2334):
 1118 - bldg
-1367 - far - target & npc
+ 608 - far - target & npc
  608 - npc
+
+train1_exp2 (759):
+ 759 far - target & npc
 
 train1_total: 6549
 
